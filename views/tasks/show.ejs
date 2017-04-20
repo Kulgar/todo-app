@@ -1,0 +1,15 @@
+<div class="card-panel green lighten-2">
+    <div class="row">
+        <div class="col s9">
+            <span class="white-text"><%= todo.description[actualLanguage] %></span>
+        </div>
+        <div class="col s3">
+            <form action="/todos/<%= todo.id %>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <button type="submit" class="waves-effect waves-light btn red">
+                    <i class="material-icons left">delete</i>Delete
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

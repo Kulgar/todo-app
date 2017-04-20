@@ -1,0 +1,18 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { 
+    title: 'Todo List', 
+    todos: [{
+      description: {
+        'fr': 'une tache',
+        'en': 'a task'
+      },
+      id: '1'
+    }]
+  });
+});
+
+module.exports = router;
